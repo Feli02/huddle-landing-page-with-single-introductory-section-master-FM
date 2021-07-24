@@ -1,0 +1,216 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --violet: hsl(257, 40%, 49%);
+    --soft-magenta: hsl(300, 69%, 71%);
+    --magenta: hsl(330, 99%, 71%);;
+}
+
+body, html{
+    width: 100vw;
+    min-height: 100vh;
+    background: var(--violet) url("./images/bg-mobile.svg") no-repeat top;
+    font-family: 'Open Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+main{
+    margin: 8% 10% 0 10%;
+    flex-grow: 1;
+}
+
+.logo{
+    width: 40%;
+    margin-bottom: 20%;
+}
+
+.illustration{
+    width: 100%;
+    margin-bottom: 20%;
+}
+
+.container-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.title, .info{
+    color: white;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.info{
+    line-height: 25px;
+}
+
+.btn{
+    color: var(--violet);
+    border: none;
+    background: white;
+    font-family: 'Poppins', sans-serif;
+    width: 70%;
+    padding: 10px;
+    border-radius: 50px;
+    box-shadow: 6px 10px 20px -5px rgb(0 0 0 / 27%);
+    cursor: pointer;
+}
+
+.btn:hover{
+    background: var(--soft-magenta);
+}
+
+#facebook svg {
+    padding: 0px;
+}
+  
+#twitter svg {
+    padding: 7px;
+}
+  
+#instagram svg {
+    padding: 5px;
+}
+
+#instagram svg, #facebook svg, #twitter svg{
+    fill: white;
+    border-radius: 100%;
+    width: 32px;
+    height: 31px;
+    transition: all 0.2s;
+    border: 1.5px solid white;
+}
+
+#instagram svg:hover,
+#facebook svg:hover,
+#twitter svg:hover {
+  border: 1.5px solid var(--magenta);
+  fill: var(--magenta);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+#social-container{
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+    margin: auto;
+    margin-bottom: 15px;
+}
+
+.attribution{
+    width: 100%;
+    line-height: 30px;
+    bottom: 10px;
+    text-align: center;
+}
+
+.attribution a{
+    text-decoration: underline wavy #00b4d8;
+    color: #00b4d8;
+    transition: all 0.3s
+}
+
+.attribution a:hover{
+    transition: all, 0.3s ;
+    color: #f72585;
+    text-decoration: underline wavy #f72585;
+}
+
+@media screen and (min-width: 580px) and (max-width: 1000px){
+    body{
+        background: var(--violet) url("./images/bg-desktop.svg") no-repeat;
+    }
+    .logo, .illustration{
+        margin-bottom: 10%;
+    }
+    .title{
+        font-size: 45px;
+        margin-bottom: 25px;
+    }
+    .info {
+        line-height: 45px;
+        font-size: 25px;
+        margin-bottom: 30px;
+    }
+    .btn{
+        width: 60%;
+        padding: 15px;
+        margin-bottom: 5%;
+        font-size: 25px;
+    }
+    #instagram svg, #facebook svg, #twitter svg {
+        width: 54px;
+        height: 52px;
+    }
+      
+    #twitter svg {
+        padding: 10px;
+    }
+    
+    #instagram svg {
+        padding: 8px;
+    }
+}
+
+@media screen and (min-width: 1000px){
+    body{
+        background: var(--violet) url("./images/bg-desktop.svg") no-repeat top;
+    }
+    main {
+        margin: 5% 5% 0 5%;
+        flex-grow: 1;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .container-header {
+        width: 55%;
+    }
+
+    .container-main {
+        width: 40%;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    
+    .logo, .illustration{
+        margin-bottom: 10%;
+    }
+    .title{
+        font-size: 30px;
+        margin-bottom: 25px;
+        text-align: left;
+    }
+    .info {
+        line-height: 25px;
+        font-size: 16px;
+        margin-bottom: 30px;
+        text-align: left;
+    }
+    .btn {
+        padding: 10px;
+        width: 40%;
+        font-size: 16px;
+    }
+    #social-container{
+        width: 15%;
+        margin-left: 75%;
+    }
+}
